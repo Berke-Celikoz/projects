@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
-data=[]
+data=[] # scraped data will be stored here.
+
 for page in range(1,51,1):
     url = "https://www.arabam.com/ikinci-el?take=50&page=" + str(page) # url of the website
     headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36", "Accept-Encoding":"gzip, deflate", "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "DNT":"1","Connection":"close", "Upgrade-Insecure-Requests":"1"}
